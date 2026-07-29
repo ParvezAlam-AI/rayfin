@@ -1,0 +1,180 @@
+export type Game = {
+  id: string;
+  title: string;
+  publisher: string;
+  genre: string;
+  price: number;
+  oldPrice?: number;
+  badge?: string;
+  image: string;
+  platform: string;
+  rating: string;
+  description: string;
+  features: string[];
+};
+
+export const games: Game[] = [
+  {
+    id: '00000000-0000-4000-8000-000000000001',
+    title: 'EA SPORTS FC™ 26',
+    publisher: 'Electronic Arts',
+    genre: 'Sports',
+    price: 71.99,
+    badge: 'Included',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202507/2511/19ad6574090b6a71c88f0e6152ae5a668cc85882d87c51b5.png?w=900',
+    platform: 'PS5',
+    rating: '3',
+    description: 'Experience the world’s game with responsive dribbling, smarter positioning and authentic competition across the biggest leagues.',
+    features: ['1–4 players', 'Online play optional', 'PS5 Pro Enhanced'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000002',
+    title: 'EA SPORTS FC™ 27',
+    publisher: 'Electronic Arts',
+    genre: 'Sports',
+    price: 99.99,
+    oldPrice: 109.99,
+    badge: 'Save 10%',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202607/2322/78e0ba12f88a79c454b6b17d1638f2ae0b2943f1dbc98a17.png?w=900',
+    platform: 'PS5 / PS4',
+    rating: '3',
+    description: 'Pre-order the next chapter of the world’s game and build your dream squad across updated modes and competitions.',
+    features: ['Pre-order', 'Online play required', 'In-game purchases'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000003',
+    title: 'Fortnite',
+    publisher: 'Epic Games',
+    genre: 'Action',
+    price: 0,
+    badge: 'Free',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202607/1420/1183293e02fd8324f72b20eab7632e1632a41528e9ac5c86.png?w=900',
+    platform: 'PS5 / PS4',
+    rating: '12',
+    description: 'Create, play and battle with friends for free in an ever-evolving universe of games, concerts and creator-made islands.',
+    features: ['Up to 100 online players', 'Online play required', 'Vibration function'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000004',
+    title: 'Grand Theft Auto VI',
+    publisher: 'Rockstar Games',
+    genre: 'Action',
+    price: 99.99,
+    badge: 'Pre-order',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202606/1818/9f51f0ccdb65bd29c36a0907a738c2902a712f03e2fd6470.png?w=900',
+    platform: 'PS5',
+    rating: '18',
+    description: 'Return to Vice City and the neon-soaked state of Leonida in the biggest, most immersive evolution of the series yet.',
+    features: ['1 player', 'Remote Play supported', 'PS5 Pro Enhanced'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000005',
+    title: 'Roblox',
+    publisher: 'Roblox Corporation',
+    genre: 'Family',
+    price: 0,
+    badge: 'Free',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202604/0801/f2bdf0b6807d0e43c432e4de00f444df6c97732065904006.png?w=900',
+    platform: 'PS5 / PS4',
+    rating: '7',
+    description: 'Join millions of people and discover an infinite variety of immersive experiences created by a global community.',
+    features: ['Online play required', 'Cross-platform multiplayer', 'In-game purchases'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000006',
+    title: 'Call of Duty®',
+    publisher: 'Activision',
+    genre: 'Shooter',
+    price: 69.99,
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202605/2815/e7c940f1c3b9c2725e08b10979926ed6b71482f6f42a65ba.png?w=900',
+    platform: 'PS5 / PS4',
+    rating: '18',
+    description: 'Jump into blockbuster campaigns, best-in-class multiplayer and the next evolution of Call of Duty Warzone.',
+    features: ['Online play required', 'Up to 64 online players', 'Voice chat'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000007',
+    title: 'eFootball™',
+    publisher: 'Konami',
+    genre: 'Sports',
+    price: 0,
+    badge: 'Free',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202606/0204/70d6f75b5e77ebde8fcadb3cb75a16fc5b8ab31b4847d678.png?w=900',
+    platform: 'PS5 / PS4',
+    rating: '3',
+    description: 'Take to the pitch with authentic clubs and players in Konami’s evolving free-to-play football platform.',
+    features: ['1–4 players', 'Online play optional', 'In-game purchases'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000008',
+    title: 'Call of Duty®: Black Ops II',
+    publisher: 'Activision',
+    genre: 'Shooter',
+    price: 39.99,
+    oldPrice: 79.99,
+    badge: 'Save 50%',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202606/2619/c4ce7fe379aa05dd3f6ecc11e8fa38dfea03d4b4a8bad73a.png?w=900',
+    platform: 'PS5',
+    rating: '18',
+    description: 'A generation-spanning campaign and signature competitive multiplayer return, rebuilt for PlayStation 5.',
+    features: ['1–2 players', 'Online multiplayer', 'DualSense features'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000009',
+    title: "Assassin's Creed Black Flag Resynced",
+    publisher: 'Ubisoft',
+    genre: 'Adventure',
+    price: 59.99,
+    badge: 'New',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202603/1215/0962bc91a4952e6433367fcfec38b7e0655c6bd29b431712.png?w=900',
+    platform: 'PS5',
+    rating: '18',
+    description: 'Sail the golden age of piracy in a refreshed Caribbean adventure with enhanced visuals and immersive DualSense support.',
+    features: ['1 player', 'Remote Play supported', 'Game Help supported'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000010',
+    title: 'Grand Theft Auto V',
+    publisher: 'Rockstar Games',
+    genre: 'Action',
+    price: 19.99,
+    oldPrice: 39.99,
+    badge: '-50%',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202202/2816/K6mmm89oNII1iI1aqaClO0wh.png?w=900',
+    platform: 'PS5',
+    rating: '18',
+    description: 'Experience the interwoven stories of Franklin, Michael and Trevor in Los Santos, plus the ever-evolving world of GTA Online.',
+    features: ['1 player', 'Up to 30 online players', 'PS5 Pro Enhanced'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000011',
+    title: 'Halo: Campaign Evolved',
+    publisher: 'Xbox Game Studios',
+    genre: 'Shooter',
+    price: 49.99,
+    badge: 'New',
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202510/1321/a0d52445fcb5d96d66a361b6759d1b8b959c4644cea70714.png?w=900',
+    platform: 'PS5',
+    rating: '16',
+    description: 'The legendary campaign arrives on PlayStation, modernized with refined controls, haptics and expanded combat encounters.',
+    features: ['1–2 players', 'Online co-op', 'Haptic feedback'],
+  },
+  {
+    id: '00000000-0000-4000-8000-000000000012',
+    title: 'The Mound: Omen of Cthulhu',
+    publisher: 'Nacon',
+    genre: 'Horror',
+    price: 26.99,
+    image: 'https://image.api.playstation.com/vulcan/ap/rnd/202605/0713/534efd914eb9f889e13e6090781eb26bf6ad76f208aca86b.png?w=900',
+    platform: 'PS5',
+    rating: '18',
+    description: 'Descend into a co-operative nightmare where trust is fragile and an ancient presence distorts reality.',
+    features: ['Online co-op', 'Online play required', '3D audio'],
+  },
+];
+
+export const genres = ['All games', 'Action', 'Sports', 'Shooter', 'Adventure', 'Family', 'Horror'];
+
+export function formatPrice(price: number) {
+  return price === 0 ? 'Free' : `$${price.toFixed(2)}`;
+}
