@@ -1,55 +1,92 @@
-# Basic Todo App
+# PlayStation Store for Microsoft Fabric
 
-End-to-end Fabric-authenticated todo CRUD with a Rayfin data model and per-user row-level security.
-A working starter that exercises the full data path — sign in, create todos, toggle them, delete them.
+A PlayStation-inspired storefront built as a Rayfin app for Microsoft Fabric.
+It recreates the PlayStation Store browsing experience with a responsive sale
+hero, UAE game catalogue, search, filters, product details, wishlist, shopping
+bag, and checkout flow.
 
-## Getting started
+## Live app
 
-```bash
-# Deploy app to Fabric and start the local dev server
-npm run dev
+- Fabric workspace: `Testing-Fabric-Trial`
+- Fabric app item: `playstation-store`
+- Hosted app: <https://curly-birch-cf8d0d13e3-centralus.webapp.fabricapps.net>
 
-# As needed, apply database migrations (one time, when running locally)
-npm run rayfin:db
-```
+## Features
 
-Open [http://localhost:5173](http://localhost:5173) to view the app.
+- PlayStation-style responsive storefront and navigation
+- Summer Sale hero and UAE game catalogue
+- Game search and genre filters
+- Product detail panels with pricing, platform, publisher, features, and rating
+- Per-user wishlist and shopping bag
+- Checkout and order creation
+- Microsoft Fabric authentication
+- Rayfin data persistence with user-scoped access policies
+
+## Technology
+
+- React 19 and TypeScript
+- Vite
+- Microsoft Rayfin
+- Microsoft Fabric authentication and SQL data services
+- Vitest and Testing Library
 
 ## Project structure
 
 ```text
+playstation/
+├── public/                  # Static artwork and social preview
 ├── rayfin/
-│   ├── rayfin.yml          # Fabric service configuration
-│   └── data/
-│       ├── Todo.ts         # Todo entity with @role-based per-user access
-│       └── schema.ts       # Schema export consumed by the typed client
+│   ├── data/                # Product, cart, wishlist, and order entities
+│   └── rayfin.yml           # Fabric service and hosting configuration
 ├── src/
-│   ├── main.tsx            # Entry point + Rayfin client bootstrap
-│   ├── App.tsx             # Routes and auth gate
-│   ├── hooks/
-│   │   └── AuthContext.tsx # React context wrapping the auth helpers
-│   ├── components/
-│   │   └── AuthPage.tsx    # Sign-in UI
-│   ├── pages/
-│   │   └── HomePage.tsx    # Todo list UI
-│   └── services/
-│       ├── IAuthService.ts        # Auth service contract + AuthUser type
-│       ├── MockAuthService.ts     # Local-dev impl (email/password)
-│       ├── RayfinAuthService.ts   # Production impl (Fabric brokered auth)
-│       ├── rayfinClient.ts        # Typed Rayfin client singleton
-│       ├── bootstrap.ts           # Reads env, picks the right auth service
-│       └── todos.ts               # Todo CRUD wrappers (in-memory in local dev)
+│   ├── components/          # Authentication UI
+│   ├── data/                # Store catalogue
+│   ├── hooks/               # Authentication context
+│   ├── pages/               # Storefront UI and interactions
+│   ├── services/            # Rayfin auth and data integration
+│   └── __tests__/           # Storefront and authentication tests
 └── package.json
 ```
 
-## Scripts
+## Local development
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Deploy app to Fabric and start local dev server |
-| `npm run build` | Production build |
-| `npm run build:fabric` | Build for Fabric deployment (entrypoint for `rayfin up staticapp deploy`) |
-| `npm run lint` | Lint with ESLint |
-| `npm run test` | Run unit tests with Vitest |
-| `npm run rayfin:up` | Deploy app to Fabric (no local dev server) |
-| `npm run rayfin:db` | Apply database migrations |
+Prerequisites:
+
+- Node.js 20 or later
+- Access to the configured Microsoft Fabric workspace
+- Permission to use the `playstation-store` Fabric app item
+
+```bash
+npm install
+npm run dev
+```
+
+The development server is available at <http://localhost:5173>.
+
+## Build and test
+
+```bash
+npm run build
+npm test
+npm run lint
+```
+
+## Fabric deployment
+
+Authenticate with Rayfin, apply the data schema when required, and deploy:
+
+```bash
+npx rayfin auth login
+npm run rayfin:db
+npx rayfin up staticapp deploy
+```
+
+The Fabric schema contains `Product`, `CartItem`, `WishlistItem`, and
+`StoreOrder` entities. Cart, wishlist, and order records are scoped to the
+signed-in user.
+
+## Disclaimer
+
+This is an independent demonstration project for Microsoft Fabric. It is not
+affiliated with, endorsed by, or operated by Sony Interactive Entertainment.
+PlayStation names and related marks belong to their respective owners.

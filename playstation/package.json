@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "template": {
-    "name": "todoapp",
-    "displayName": "Basic Todo App",
-    "description": "End-to-end Fabric-authenticated todo CRUD with a Rayfin data model and per-user row-level security — a working starter that exercises the full data path"
+    "name": "playstation-store",
+    "displayName": "PlayStation Store",
+    "description": "A PlayStation-inspired storefront for Microsoft Fabric with Rayfin authentication, catalogue, wishlist, bag, and order persistence"
   },
   "scripts": {
     "predev": "rayfin env --framework vite",
